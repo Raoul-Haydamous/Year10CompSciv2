@@ -53,5 +53,33 @@ def ext1():
         print(names[i-1],score[i-1]) #not sure why or how it works
     if search not in names:
         print('That is not a listed user.')
+import random
 def ext2():
-    
+    score = 0
+    while True:
+        array = []
+
+        for i in range(50):
+            array.append(random.randint(1,100))
+        for n in range(5, 0, -1):
+            if n == 1:
+                search = int(input(f"50 random numbers have been added ranging 1-100, try and guess one of them, you have {n} chance left. "))
+            else:
+                search = int(input(f"50 random numbers have been added ranging 1-100, try and guess one of them, you have {n} chances left. "))
+            
+            if search not in array:
+                print(f"{search} isn\'t in the list.")
+            else:
+                print('You got it right! +1 added to score')
+                score += 1
+                break
+
+        print('Your total score is', score)
+        retry = input('Would you like to try again(y/n)? ').lower()
+        if retry != 'y':
+            print('ok')
+            break
+ext2()
+
+
+ #wpm

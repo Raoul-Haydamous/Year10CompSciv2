@@ -44,3 +44,14 @@ def t3():
     print(number)
 def ext1():
     names = ['','','','','']
+    score = []
+    for i in range(5):
+        names[i]=input('Enter a name. ')
+        score.append(input('What is their score? '))
+    search = input('Give me a user and ill tell you their score. ')
+    if search in names:
+        print(names[i-1],score[i-1]) #not sure why or how it works
+    if search not in names:
+        print('That is not a listed user.')
+def ext2():
+    

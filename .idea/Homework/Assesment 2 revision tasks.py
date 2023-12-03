@@ -74,6 +74,20 @@ def t3():
 
 def t4():
     import random
+    
+    highest = 0
+    
     colors = ['Red','Blue','Green']
     count = ['','','']
+    for i in range(3):
+        count[i] = random.randint(1,25)
+    
+        if count[i] > highest:
+            highest = count[i]
+    
+    print(colors)
+    print(count)
+    print(highest)
+
+
 t4()
